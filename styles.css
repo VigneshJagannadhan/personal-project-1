@@ -3,7 +3,7 @@
   }
 
   #overlay{
-    box-shadow: inset 0 0 0 1000px rgba(22, 21, 21, 0.294);
+    box-shadow: inset 0 0 0 1000px rgba(22, 21, 21, 0.597);
     padding: 0%;
     margin: 0%;
     width: 100%;
@@ -61,6 +61,9 @@
     background-color:#e5e5e5;
     text-align:center;
     padding:10px;margin-top:7px;
+  }
+  .menu{
+    display: flex;
   }
 
   /* DRAWER BUTTON COMMON CSS */
@@ -178,8 +181,7 @@
   .sub_content {
     width: 100%;
     float: right;
-    text-align: justify;
-    padding-left: 1.5%;
+    padding-left: 4%;
     right: 1.5%;
     margin-top: 2%;
     margin-right: 3%;
@@ -194,6 +196,7 @@
   .sub_content p{
     color: white;
     font-size:large;
+    margin-right: 4%;
   }
 
   /* SELECTION TABLE CSS */
@@ -227,14 +230,14 @@
     display: flex;
   }
 
-  .row:nth-child(even){
+  /* .row:nth-child(even){
     direction: rtl;
-  }
+  } */
 
   .side_image{
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+    width: 600px;
+    height: 400px;
+    object-fit:fill;
   }
 
   .contents{
@@ -271,9 +274,59 @@
 
 
   /* FOR RESPONSIVENESS */
+
+
+
+  @media only screen and (max-width: 370px) {
+    /* For mobile phones: */
+    .main,.right {
+      width: 100%;
+    }
+    .menu{
+      flex-direction: column;
+    }
+    .contents h1{
+      font-size:15vw;
+    }
+    .contents p{
+      font-size:4vw;
+    }
+
+    #header{
+      margin-top: 10%;
+      width: 70%;
+      color: #fff;
+      text-align:right;
+      font-size: 2vw; 
+      color: white;
+    }
+
+    .image1_background{
+      background-image: url('assets/messi.jpeg');
+      background-position: right;
+      background-size: inherit;
+      background-repeat: space;
+      
+    }
+
+    .row{
+      margin-right: 2%;
+      margin-left: 2%;
+      box-shadow: inset 0 0 0 1000px rgba(8, 1, 1, 0.536);
+      flex-direction: column;
+    }
+
+    .side_image{
+        width: 50%; /* adjust the image size for mobile */
+        height: auto;
+    }
+  }
+
+
+
   @media only screen and (max-width: 620px) {
     /* For mobile phones: */
-    .menu, .main, .right {
+    .main,.right {
       width: 100%;
     }
     .contents h1{
@@ -304,6 +357,62 @@
       margin-right: 2%;
       margin-left: 2%;
       box-shadow: inset 0 0 0 1000px rgba(8, 1, 1, 0.536);
-      display: block;
+      flex-direction: column;
+    }
+
+    .side_image{
+        width: 50%; /* adjust the image size for mobile */
+        height: auto;
+    }
+  }
+
+
+  @media only screen and (max-width: 1115px) {
+    /* For mobile phones: */
+    .main,.right {
+      width: 100%;
+    }
+    .contents h1{
+      font-size:15vw;
+    }
+    .contents p{
+      font-size:4vw;
+    }
+
+    #header{
+      margin-top: 10%;
+      width: 70%;
+      color: #fff;
+      text-align:left;
+      font-size: 2vw; 
+      color: white;
+    }
+
+    .image1_background{
+      background-image: url('assets/messi.jpeg');
+      background-position: right;
+      background-size: inherit;
+      background-repeat: space;
+      
+    }
+
+    .row{
+      margin-right: 2%;
+      margin-left: 2%;
+      box-shadow: inset 0 0 0 1000px rgba(8, 1, 1, 0.536);
+      flex-direction: column;
+    }
+
+    .side_image{
+        width: 100%; /* adjust the image size for mobile */
+        height: auto;
+    }
+
+    .sub_content h2{
+      margin-right: 4%;
+    }
+
+    .sub_content p{
+      margin-right: 4%;
     }
   }
