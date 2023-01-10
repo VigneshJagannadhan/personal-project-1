@@ -227,10 +227,6 @@
     display: flex;
   }
 
-  /* .row:nth-child(even){
-    direction: rtl;
-  } */
-
   .side_image{
     width: 600px;
     height: 400px;
@@ -255,25 +251,7 @@
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   /* FOR RESPONSIVENESS */
-
-
-
   @media only screen and (max-width: 370px) {
     /* For mobile phones: */
     .main,.right {
